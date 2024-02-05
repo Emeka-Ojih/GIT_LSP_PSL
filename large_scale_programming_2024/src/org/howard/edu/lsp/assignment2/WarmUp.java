@@ -1,8 +1,6 @@
 /**
 * Name: Chukwuemeka Ojih
-*/
-
-package org.howard.edu.lsp.assignment2;
+*/package org.howard.edu.lsp.assignment2;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,7 +13,7 @@ public class WarmUp {
 		Map<String, Integer> wordFrequency = new HashMap(); 
 		String line;
 	    String filePath = "src/org/howard/edu/lsp/assignment2/words.txt";
-    	try {
+	    try {
     		BufferedReader fileReader = new BufferedReader(new FileReader(filePath));
 			while ((line = fileReader.readLine()) != null) {
 				for (String word: line.split("\\s+")) {
