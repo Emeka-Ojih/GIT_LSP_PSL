@@ -12,20 +12,21 @@ public class SecurityOps {
      * @return The encrypted string
      */
     public static String encrypt(String text) {
-        // StringBuilder for efficient string modification
+        // stringBuilder for efficient string modification
         StringBuilder evenIndexed = new StringBuilder();
         StringBuilder oddIndexed = new StringBuilder();
 
         // Remove all non-alphanumeric characters
-        text = text.replaceAll("[\\W_]", ""); // Underscore is also considered non-word
+        text = text.replaceAll("[\\W_]", ""); // underscore is considered non-word
 
         // Iterate over the characters of the string
         for (int i = 0; i < text.length(); i++) {
             if (i % 2 == 0) {
-                // Add characters at even indices
+                // add characters at even indices
                 evenIndexed.append(text.charAt(i));
-            } else {
-                // Add characters at odd indices
+            } 
+            else {
+                // add characters at odd indices
                 oddIndexed.append(text.charAt(i));
             }
         }
